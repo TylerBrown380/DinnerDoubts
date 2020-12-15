@@ -1,0 +1,6 @@
+framework module Pods_DinnerDoubts {
+  umbrella header "Pods-DinnerDoubts-umbrella.h"
+
+  export *
+  module * { export * }
+}

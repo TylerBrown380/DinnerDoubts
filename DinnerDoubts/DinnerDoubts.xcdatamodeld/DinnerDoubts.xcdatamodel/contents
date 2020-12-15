@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19C57" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Recipe" representedClassName="Recipe" syncable="YES" codeGenerationType="class">
+        <attribute name="recipeCookTime" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="recipeIngredients" optional="YES" attributeType="String"/>
+        <attribute name="recipeInstructions" optional="YES" attributeType="String"/>
+        <attribute name="recipeName" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Restaurant" representedClassName="Restaurant" syncable="YES" codeGenerationType="class">
+        <attribute name="restaurantName" optional="YES" attributeType="String"/>
+        <attribute name="restaurantTheme" optional="YES" attributeType="String"/>
+        <relationship name="restaurantLocation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RestaurantLocation" inverseName="restaurant" inverseEntity="RestaurantLocation"/>
+    </entity>
+    <entity name="RestaurantLocation" representedClassName="RestaurantLocation" syncable="YES" codeGenerationType="class">
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="restaurant" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Restaurant" inverseName="restaurantLocation" inverseEntity="Restaurant"/>
+    </entity>
+    <elements>
+        <element name="Restaurant" positionX="-172.30859375" positionY="-125.0703125" width="128" height="88"/>
+        <element name="RestaurantLocation" positionX="18.63671875" positionY="-124.23828125" width="128" height="88"/>
+        <element name="Recipe" positionX="-63" positionY="27" width="128" height="103"/>
+    </elements>
+</model>
